@@ -1,0 +1,126 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("image_fondo.jpg");
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+div > nav ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 100%;
+    min-width: 1.5em;
+    background-color: cyan;
+    border-radius: 50px;
+    list-style: none;
+}
+
+div > nav ul li {
+    margin-right: 1em;
+}
+
+div > nav ul li::first-letter {
+    text-transform: uppercase;
+}
+
+main {
+    width: 100%;
+    padding: 2rem;
+}
+
+.uno:active,.dos:active,.tres:active,.cuatro:active,
+.cinco:active,.seis:active,.siete:active,.ocho:active,
+.nueve:active,.diez:active {
+   transform: scale(1.5,1.5);
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.contraseña,.usuario {
+    grid-column: 6;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    min-width: 1.5em;
+}
+
+footer > ul li {
+    display: inline-block;
+    justify-content: center;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 400px) {
+    div > nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main {
+        padding-left: 5em;
+    }
+}
+
+@media (min-width: 400px) {         
+    .politica {
+        margin-left: 9em;
+    }
+    main {
+        padding-left: 5em;
+    }
+}
+
+@media (min-width: 600px) {
+    body > div {
+        padding-left: 3.5em;
+    }
+    
+    main {
+        padding-left: 6em;
+    }
+    footer {
+        margin-left: 9em;
+    }
+    .politica {
+        margin-left: 7em;
+    }
+    .contraseña,.usuario {
+        grid-column: 4;
+    }
+}
+
+@media (min-width: 865px) {
+    body > div {
+        padding-left: 6em;
+    }
+    footer {
+        margin-left: 5em;
+    }
+    .politica {
+        margin-left: 0.2em
+    }
+    .contraseña,.usuario {
+        grid-column: 6;
+    }
+}
+
+
+
+
+
+
+
